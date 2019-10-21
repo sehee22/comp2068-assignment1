@@ -7,54 +7,33 @@ a {
     color: #00B7FF;
 }
 
-/* header */
-header {
-    background-color: white;
-    position: fixed;
-    overflow: hidden;
-    height: 100px;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-
-ul {
-    list-style-type: none;
-    margin: auto;
-    padding: 0;
-    overflow: hidden;
+nav ul {
     text-align: center;
 }
 
-/* context*/
 nav ul li {
     display: inline-block;
     text-align: center;
     margin: auto;
 }
 
-/* context*/
 li a {
     display: block;
     color: #d7a150;
     font-weight: bold;
     font-size: 30px;
     text-align: center;
-    padding: 30px;
-    text-decoration: none;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-image: linear-gradient( to right, #283271, #283271 50%, #d7a150 50%);
-    background-size: 200% 100%;
-    background-position: 100%;
+    padding: 20px;
 }
 
-/* pseudo-class*/
 a:hover {
-    transition: all 0.5s cubic-bezier(0.000, 0.000, 0.230, 1);
-    background-position: 0%;
+    transition: 0.5s cubic-bezier(0.42, 0.0, 0.58, 1.0);
 }
 
 dd {
-    text-indent: 50px;
+    text-indent: 20px;
+}
+
+ul {
+    list-style-type: square;
 }
