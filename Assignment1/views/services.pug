@@ -3,7 +3,38 @@
 block header
     include header
 block content
-  h1= title
-  p Welcome to #{title}
+  table(class="table table-striped")
+    thead(class="text-center")
+        th RDMBS
+        th Programming Languages
+        th Web Technology
+        th OS
+    tbody(class="text-center")
+        tr
+            td 
+                a(href="../images/MCDBA.jpg" target="_blank")|Microsoft SQL Server *
+            td Java
+            td HTML/CSS
+            td Linux
+        tr
+            td SSIS
+            td Python
+            td PHP
+            td 
+                a(href="../images/CSA.jpg" target="_blank")|Unix *
+        tr
+            td MySQL
+            td Swift
+            td JavaScript
+            td Windows
+        tr
+            td 
+                a(href="../images/OCP.jpg" target="_blank")|OCP 11g *
+            td C#
+            td ASP.NET
+            td 
+            
+  p * Click and check the certificate.
+
 block footer
     include footer
