@@ -27,7 +27,7 @@ li a {
 }
 
 a:hover {
-    transition: 0.5s cubic-bezier(0.42, 0.0, 0.58, 1.0);
+    transition: 0.7s cubic-bezier(0.42, 0.0, 0.58, 1.0);
 }
 
 dd {
