@@ -5,13 +5,26 @@ block header
 block content
     div
         h2 Sehee Park
+        // description list tag
         dl
             dt 
+                // dd tag indent 20px
                 dd seheepark511@gmail.com
                 dd (647)850-9230
                 dd
                     // the link will open in new tab
                     a(href="https://www.linkedin.com/in/seheepark511/" target="_blank")|https://www.linkedin.com/in/seheepark511/
 
+    form(method="get" action="/sent")
+        fieldset
+            label Name
+            input(name="name" id="name" type="text" required placeholder="Your Name")
+        fieldset
+            label Email
+            input(name="email" id="email" type="text" required placeholder="Your Email")
+        fieldset
+            label Message
+            textarea(name="message" id="message" type="text" required placeholder="Enter your message here")
+        input(type='submit' value='Send Email to Sehee')
 block footer
     include footer

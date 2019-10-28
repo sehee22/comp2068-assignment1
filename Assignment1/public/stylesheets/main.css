@@ -10,10 +10,6 @@ body {
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-    color: #00B7FF;
-}
-
 nav ul {
     text-align: center;
 }
@@ -25,7 +21,6 @@ nav ul li {
 }
 
 li a {
-    display: block;
     color: #d7a150;
     font-weight: bold;
     font-size: 30px;
@@ -33,12 +28,12 @@ li a {
     padding: 20px;
 }
 
-// mouse over, a tag text colour will be changed
+/*mouse over, a tag text colour will be changed*/  
 a:hover {
     transition: 0.7s cubic-bezier(0.42, 0.0, 0.58, 1.0);
 }
 
-// indent dd tag
+/*indent dd tag*/
 dd {
     text-indent: 20px;
 }

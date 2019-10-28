@@ -1,6 +1,9 @@
 ﻿'use strict';
 var express = require('express');
 var router = express.Router();
+var nodemailer = require('nodemailer');
+var bodyParser = require('body-parser')
+
 
 router.get('/', function (req, res) {
     res.render('index', { title: 'Home' });
@@ -21,6 +24,38 @@ router.get('/:page', function (req, res) {
     }  
     else if (req.params.page == 'contact') {
         res.render('contact', { title: 'Contact Me' });
+    }
+    else if (req.params.page == 'sent') {
+        var name = req.query.name;
+        var email = req.query.email;
+        var message = req.query.message;
+
+
+        var transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+                user: 'comp2068.mail@gmail.com',
+                pass: 'P@$$w0rd200389459.'
+            }
+        });
+
+        var mailOption = {
+            to: 'comp2068.mail@gmail.com',
+            subject: 'Hello from my Express Portfolio Site',
+            html: '<h2>' + name + '</h2> </br><h2>' +  email + '</h2></br><p>' + message + '</p>'
+
+        };
+
+        transporter.sendMail(mailOption, function (err, info) {
+            if (err) {
+                console.error('Send Mail error : ', err);
+            }
+            else {
+                console.log('Message sent : ', info);
+            }
+        });
+
+        res.render('sent', { title: 'Mail Sent'});
     }
 });
 
