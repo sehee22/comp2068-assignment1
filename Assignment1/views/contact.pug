@@ -14,17 +14,17 @@ block content
                 dd
                     // the link will open in new tab
                     a(href="https://www.linkedin.com/in/seheepark511/" target="_blank")|https://www.linkedin.com/in/seheepark511/
-
-    form(method="get" action="/sent")
-        fieldset
-            label Name
-            input(name="name" id="name" type="text" required placeholder="Your Name")
-        fieldset
-            label Email
-            input(name="email" id="email" type="text" required placeholder="Your Email")
-        fieldset
-            label Message
-            textarea(name="message" id="message" type="text" required placeholder="Enter your message here")
-        input(type='submit' value='Send Email to Sehee')
+    hr
+    form(class="form-group" method="get" action="/sent")
+        fieldset(class="form-group")
+            label Name: 
+            input(class="form-control" name="name" id="name" type="text" required placeholder="Your Name")
+        fieldset(class="form-group")
+            label Email: 
+            input(class="form-control" name="email" id="email" type="email"  required placeholder="Your Email")
+        fieldset(class="form-group")
+            label Message: 
+            textarea(class="form-control" name="message" id="message" type="text" required placeholder="Enter your message here")
+        input(class="btn btn-primary" type="submit" value="Send")
 block footer
     include footer
