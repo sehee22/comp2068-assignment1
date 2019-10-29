@@ -41,7 +41,7 @@ router.get('/:page', function (req, res) {
 
         var mailOption = {
             to: 'comp2068.mail@gmail.com',
-            subject: 'Hello from my Express Portfolio Site',
+            subject: 'Email from Express Portfolio Site',
             html: '<h3>' + name + '(' +  email + ')</h3><br /><p>' + message + '</p>'
 
         };
